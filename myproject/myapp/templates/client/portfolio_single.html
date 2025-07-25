@@ -1,0 +1,728 @@
+{% load static %}
+<!doctype html>
+<html lang="zxx">
+
+
+
+
+<!-- Mirrored from www.nexainfotech.in/portfolio-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 04:32:11 GMT -->
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nexa Infotech | Portfolio</title>
+    <style>
+        /* Media Queries for Responsive View */
+        @media (max-width: 480px) {
+            #videoGallery {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            #videoGallery {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                overflow-x: auto;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1199px) {
+            #videoGallery {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                overflow-x: auto;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #videoGallery {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                overflow-x: auto;
+            }
+        }
+    </style>
+
+
+    <link rel="shortcut icon" href="assets/img/favicon-16x16.png" type="images/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../cdn.jsdelivr.net/npm/bootstrap%405.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- css include -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/cursor.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/imageRevealHover.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+</head>
+
+<body>
+
+    <!-- backtotop - start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop - end -->
+
+    <!-- Preloader - Start -->
+    <!-- <div id="preloader" class="preloader">
+        <div class="loader-circle">
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-logo"></div>
+        </div>
+    </div> -->
+    <!-- Preloader - End -->
+
+    <div class="xb-cursor xb-js-cursor">
+        <div class="xb-cursor-wrapper">
+            <div class="xb-cursor--follower xb-js-follower"></div>
+        </div>
+    </div>
+
+
+    <div class="body_wrap">
+
+        <!-- header start -->
+        <header id="xb-header-area" class="header-area header-style-three is-sticky">
+            <div class="xb-header">
+                <div class="container-fluid">
+                    <div class="header__wrap ul_li_between">
+                        <div class="header-left ul_li">
+                            <div class="header-logo">
+                                <a href="index-2.html">
+                                    <img src="assets/img/logo/white%20nexa%20logo.png" alt="">
+                                    <img src="assets/img/logo/nexa_logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
+                                <nav class="main-menu collapse navbar-collapse">
+                                    <ul>
+                                        <!-- <li class="menu-item-has-children active">
+                                            <a href="#!"><span>Home</span></a>
+                                            <ul class="submenu">
+                                                <li class="active"><a href="index.html"><span>Home 01</span></a></li>
+                                                <li><a href="home-2.html"><span>Home 02</span></a></li>
+                                                <li><a href="index.html"><span>Home 03</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Pages</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html"><span>About</span></a></li>
+                                                <li><a href="services.html"><span>Services</span></a></li>
+                                                <li><a href="service-single.html"><span>Service Details</span></a></li>
+                                                <li><a href="team.html"><span>Team</span></a></li>
+                                                <li><a href="team-single.html"><span>Team Details</span></a></li>
+                                                <li><a href="career.html"><span>Career</span></a></li>
+                                                <li><a href="career-single.html"><span>Career Details</span></a></li>
+                                                <li><a href="faq.html"><span>FAQ</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Portfolio</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="portfolio-single.html"><span>Portfolio</span></a></li>
+                                                <li><a href="portfolio-single.html"><span>Portfolio Details</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Blog</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html"><span>Blog</span></a></li>
+                                                <li><a href="blog-single.html"><span>Blog Details</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="index-2.html" target="_blank"><span>Home</span></a></li>
+                                        <li><a href="about.html" target="_blank"><span>About Us</span></a></li>
+                                        <li><a href="services.html" target="_blank"><span>Services</span></a></li>
+                                        <li><a href="portfolio-single.html" target="_blank"><span>Portfolio</span></a>
+                                        </li>
+                                        <li><a href="faq.html" target="_blank"><span>Faq</span></a></li>
+                                        <li><a href="team.html" target="_blank"><span>Team</span></a></li>
+                                        <li><a href="blog.html" target="_blank"><span>Blog</span></a></li>
+                                        <li><a href="contact.html" target="_blank"><span>Contact Us</span></a></li>
+
+
+                                    </ul>
+                                </nav>
+                                <div class="xb-header-wrap">
+                                    <div class="xb-header-menu">
+                                        <div class="xb-header-menu-scroll lenis lenis-smooth">
+                                            <div class="xb-menu-close xb-hide-xl">Close</div>
+                                            <nav class="xb-header-nav">
+                                                <ul class="xb-menu-primary clearfix">
+                                                    <!-- <li class="menu-item menu-item-has-children active">
+                                                        <a href="index.html"><span>Home</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li class="active"><a href="index.html"><span>Home 01</span></a></li>
+                                                            <li><a href="home-2.html"><span>Home 02</span></a></li>
+                                                            <li><a href="index.html"><span>Home 03</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Pages</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="about.html"><span>About</span></a></li>
+                                                            <li><a href="services.html"><span>Services</span></a></li>
+                                                            <li><a href="service-single.html"><span>Service Details</span></a></li>
+                                                            <li><a href="team.html"><span>Team</span></a></li>
+                                                            <li><a href="team-single.html"><span>Team Details</span></a></li>
+                                                            <li><a href="career.html"><span>Career</span></a></li>
+                                                            <li><a href="career-single.html"><span>Career Details</span></a></li>
+                                                            <li><a href="faq.html"><span>FAQ</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Portfolio</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="portfolio-single.html"><span>Portfolio</span></a></li>
+                                                            <li><a href="portfolio-single.html"><span>Portfolio Details</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Blog</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="blog.html"><span>Blog</span></a></li>
+                                                            <li><a href="blog-single.html"><span>Blog Details</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <li><a href="index-2.html" target="_blank"><span>Home</span></a></li>
+                                                    <li><a href="about.html" target="_blank"><span>About Us</span></a>
+                                                    </li>
+
+                                                    <li><a href="services.html"
+                                                            target="_blank"><span>Services</span></a></li>
+                                                    <li><a href="portfolio-single.html"
+                                                            target="_blank"><span>Portfolio</span></a></li>
+                                                    <li><a href="faq.html" target="_blank"><span>Faq</span></a></li>
+                                                    <li><a href="team.html" target="_blank"><span>Team</span></a></li>
+                                                    <li><a href="blog.html" target="_blank"><span>Blog</span></a></li>
+                                                    <li><a href="contact.html" target="_blank"><span>Contact
+                                                                Us</span></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="xb-header-menu-backdrop"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right ul_li">
+                            <!-- <a href="mailto:connect@nexainfotech.in" class="header-contact">connect@nexainfotech.in</a> -->
+                            <div class="header-btn d-none d-md-block">
+                               <a href="{% url 'contact' %}" class="thm-btn"><i class="fa-regular fa-plus"></i>let’s talk</a>
+                            </div>
+                            <div class="header-bar-mobile side-menu d-lg-none">
+                                <a class="xb-nav-mobile hamburger-menu" href="javascript:void(0);">
+                                    <span class="line line--1"></span>
+                                    <span class="line line--2"></span>
+                                    <span class="line line--3"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- main area start  -->
+        <main>
+
+            <!-- breadcrumb start -->
+            <section class="breadcrumb pos-rel ul_li_center bg_img" data-bg-color="#000">
+                <div class="container">
+                    <div class="row align-items-end mt-none-30">
+                        <div class="col-lg-7 mt-30">
+                            <div class="breadcrumb__content">
+                                <span class="breadcrumb__subtitle">Meet with Nexa Infotech</span>
+                                <h2 class="breadcrumb__title">portfolio</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 mt-30">
+                            <div class="breadcrumb__list-wrap text-lg-end mb-20">
+                                <ul class="breadcrumb__list clearfix ul_li">
+                                    <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                    <li class="breadcrumb-item">Portfolio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb__shape">
+                    <div class="shape shape--1">
+                        <img src="assets/img/shape/brd_shape1.png" alt="">
+                    </div>
+                    <div class="shape shape--2">
+                        <img data-parallax='{"y":80}' src="assets/img/shape/brd_shape2.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb end -->
+
+            <!-- portfolio gallery start -->
+            <section class="portfolio-gallery pt-120 position-relative">
+                <div class="container-fluid position-relative" style="width: 1300px; ">
+
+                    <div class="d-flex overflow-auto position-relative" id="videoGallery"
+                        style="scroll-behavior: smooth; gap: 30px;">
+                        <!-- <div class="d-flex flex-nowrap"> -->
+
+
+                        <!-- <div class="portfolio-gallery-slider swiper-container">
+                                <div class="swiper-wrapper">-->
+                        <!-- <div class="swiper-slide">   -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+                            <h4 class="xb-item--title mb-35">Neolith</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/2.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+                            <!-- <a class="xb-overlay popup-image" href=""></a> -->
+                        </div>
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+                            <h4 class="xb-item--title mb-35">Sunrise Interior Hub</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Drone%20Final.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+                            <!-- <a class="xb-overlay popup-image" href=""></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+                            <h4 class="xb-item--title mb-35">maruti residency</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Drone.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2025</span>-->
+                            </div>
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_02.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+                            <h4 class="xb-item--title mb-35">Local Vocal Business Pvt Ltd(LVB)</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Final%20LVB%20India%20Camp.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2025</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_03.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Kiran Chasmaghar</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Kiran%202.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2025</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Kiran Chasmaghar</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Kiran%203.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2025</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Sunrise Interior Hub</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Model%202.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2025</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Murlidhar Lari</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Murlidhar%20Lari%201.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Varsho</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Navratri%20Offer.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Ps Charcoal Dosa</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Reel%201.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Ps Charcoal Dosa</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Reel%203.mp4" type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="swiper-slide"> -->
+                        <div class="portfolio-gallery-item pos-rel flex-shrink-0"
+                            style="width: 100%; max-width: 380px;">
+
+                            <h4 class="xb-item--title mb-35">Shree Khodiyar Kathiyawadi Dhaba</h4>
+                            <video height="380px" width="380px" controls>
+                                <source src="assets/img/gallery/Shree%20Khodiyar%20Kathiyawadi%20Dhaba%202.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div>
+                                <!--<span class="xb-item--year">2024</span>-->
+                            </div>
+
+                            <!-- <a class="xb-overlay popup-image" href="assets/img/portfolio/gallery_01.jpg"></a> -->
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div style="opacity: initial;">
+                    <!-- Left Scroll Button -->
+                    <button class="btn btn-primary rounded-circle position-absolute top-50 start-0 translate-middle-y"
+                        style="width: 50px; height: 50px; z-index: 10;"
+                        onclick="document.getElementById('videoGallery').scrollBy({ left: -380, behavior: 'smooth' });">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Right Scroll Button -->
+                    <button class="btn btn-primary rounded-circle position-absolute top-50 end-0 translate-middle-y"
+                        style="width: 50px; height: 50px; z-index: 10;"
+                        onclick="document.getElementById('videoGallery').scrollBy({ left: 380, behavior: 'smooth' });">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+    </div>
+    </section>
+    <!-- portfolio gallery end -->
+
+    <!-- service single start -->
+    <!-- <section class="service-single pt-55 pb-120">
+                <div class="container">
+                    <div class="row mt-none-30">
+                        <div class="col-lg-9 mt-30">
+                            <div class="service-single-content">
+                                <div class="portfolio-info-wrap ul_li_between mt-none-30 mb-50">
+                                    <div class="portfolio-info ul_li mt-30">
+                                        <div class="xb-item--item">
+                                            <h3 class="xb-item--title">$10M</h3>
+                                            <span class="xb-item--desc">Budget</span>
+                                        </div>
+                                        <div class="xb-item--item">
+                                            <h3 class="xb-item--title">Olivia D. Jhon</h3>
+                                            <span class="xb-item--desc">Client</span>
+                                        </div>
+                                        <div class="xb-item--item">
+                                            <h3 class="xb-item--title">UX, Design</h3>
+                                            <span class="xb-item--desc">Category</span>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-btn mt-30">
+                                        <a href="#!" class="thm-btn thm-btn--border"><i class="fa-regular fa-plus"></i>live preview</a>
+                                    </div>
+                                </div>
+                                <p>A creative agency portfolio is a vital tool that showcases the agency’s capabilities, experience, and unique approach to solving client challenges. It typically begins with an introduction that highlights the agency's name, mission, and specialties, setting the stage for potential clients to understand what makes the agency stand out. The "About Us" section provides a deeper look into the agency's background, including its history, key team members, and the core values that drive the creative process. The services offered are then outlined in detail, ranging from branding and graphic design to web development, social media management, and content creation. This is followed by a portfolio of work that features past projects, complete with descriptions of the client’s needs, the creative solutions provided, and the results achieved, often accompanied by visual representations of the work.</p>
+                                <p>Client testimonials and logos are included to build credibility, showcasing positive feedback and demonstrating the agency’s ability to handle diverse projects. Some portfolios may also include detailed case studies that walk potential clients through the agency’s process on specific projects, highlighting the impact of their work with measurable results.</p>
+                                <h3><span>working</span> process</h3>
+                                <p>A creative agency portfolio is a vital tool that showcases the agency’s capabilities, experience, and unique approach to solving client challenges. It typically begins with an introduction that highlights the agency's name, mission, and specialties, setting the stage for potential clients to understand what makes the agency stand out. The "About Us" section provides a deeper look into the agency's background, including its history, key team members, and the core values that drive the creative process. The services offered are then outlined in detail, ranging from branding and graphic design to web development, social media management, and content creation. This is followed by a portfolio of work that features past projects, complete with descriptions of the client’s needs, the creative solutions provided, and the results achieved, often accompanied by visual representations of the work.</p>
+                                <div class="row mt-none-10 g-45 mb-60">
+                                    <div class="col-lg-6 mt-30">
+                                        <img src="assets/img/portfolio/portfolio_single1.jpg" alt="">
+                                    </div>
+                                    <div class="col-lg-6 mt-30">
+                                        <img src="assets/img/portfolio/portfolio_single2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <h3><span>challenge</span> we face</h3>
+                                <p>A creative agency portfolio is a vital tool that showcases the agency’s capabilities, experience, and unique approach to solving client challenges. It typically begins with an introduction that highlights the agency's name, mission, and specialties, setting the stage for potential clients to understand what makes the agency stand out. The "About Us" section provides a deeper look into the agency's background, including its history, key team members, and the core values that drive the creative process. The services offered are then outlined in detail, ranging from branding and graphic design to web development, social media management, and content creation. This is followed by a portfolio of work that features past projects, complete with descriptions of the client’s needs, the creative solutions provided, and the results achieved, often accompanied by visual representations of the work.</p>
+                                <p>The "About Us" section provides a deeper look into the agency's background, including its history, key team members, and the core values that drive the creative process. The services offered are then outlined in detail, ranging from branding and graphic design to web development, social media management, and content creation. This is followed by a portfolio of work that features past projects, complete with descriptions of the client’s needs, the creative solutions provided, and the results achieved, often accompanied by visual representations of the work.</p>
+                                <blockquote class="single-blockquote mt-50 mb-55">
+                                    <div class="xb-item--quote">
+                                        <img src="assets/img/icon/quote.svg" alt="">
+                                    </div>
+                                    <p class="xb-item--content">" Outstanding service! They captured our vision flawlessly and exceeded our expectations. The transformation of our brand is remarkable. Highly recommend! "</p>
+                                    <div class="xb-item--desig">
+                                        <span>CEO</span>Amelia K. Hamilton
+                                    </div>
+                                    <div class="xb-item--shape">
+                                        <img src="assets/img/shape/quote_shape.png" alt="">
+                                    </div>
+                                </blockquote>
+                                <p>A creative agency portfolio is a vital tool that showcases the agency’s capabilities, experience, and unique approach to solving client challenges. It typically begins with an introduction that highlights the agency's name, mission, and specialties, setting the stage for potential clients to understand what makes the agency stand out. The "About Us" section provides a deeper look into the agency's background, including its history, key team members, and the core values that drive the creative process. The services offered are then outlined in detail, ranging from branding and graphic design to web development, social media management, and content creation. This is followed by a portfolio of work that features past projects, complete with descriptions of the client’s needs, the creative solutions provided, and the results achieved, often accompanied by visual representations of the work.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-30">
+                            <div class="single-sidebar">
+                                <div class="widget">
+                                    <h2><span>more</span> portfolios</h2>
+                                    <ul class="service-widget list-unstyled">
+                                        <li><a href="service-single.html"><span><img src="assets/img/icon/sr_01.svg" alt="">Website design</span><i class="fa-regular fa-angle-right"></i></a></li>
+                                        <li><a href="service-single.html"><span><img src="assets/img/icon/sr_02.svg" alt="">business consult</span><i class="fa-regular fa-angle-right"></i></a></li>
+                                        <li><a href="service-single.html"><span><img src="assets/img/icon/sr_03.svg" alt="">branding design</span><i class="fa-regular fa-angle-right"></i></a></li>
+                                        <li><a href="service-single.html"><span><img src="assets/img/icon/sr_04.svg" alt="">Game design</span><i class="fa-regular fa-angle-right"></i></a></li>
+                                        <li><a href="service-single.html"><span><img src="assets/img/icon/sr_05.svg" alt="">SEO & Marketing</span><i class="fa-regular fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget contact-widget">
+                                    <h2><span>contact</span> us</h2>
+                                    <p>Measurable results and enhance your brand's market impact.</p>
+                                    <ul class="list-unstyled">
+                                        <li><a href="mailto:info@empyr.com"><i class="fas fa-envelope-open"></i>info@empyr.com</a></li>
+                                        <li><a href="tel:+12345678900"><i class="fas fa-phone-alt"></i>+123 (456) 789 00</a></li>
+                                        <li><i class="fas fa-map-marker-alt"></i>1/A, New Booston
+                                            tower, nyc.</li>
+                                    </ul>
+                                    <div class="shape">
+                                        <img src="assets/img/shape/ci_shape.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <h2><span>get</span> updates</h2>
+                                    <form class="widget-form" action="#!">
+                                        <div class="xb-item--field">
+                                            <input type="text" placeholder="your name">
+                                            <span class="xb-item--icon"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <div class="xb-item--field">
+                                            <input type="email" placeholder="email address">
+                                            <span class="xb-item--icon"><i class="fas fa-envelope-open"></i></span>
+                                        </div>
+                                        <button class="thm-btn" type="submit"><i class="fa-regular fa-plus"></i>subscribe</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+    <!-- service single end -->
+
+    <!-- cta start -->
+    <!-- <section class="cta bg_img" data-background="assets/img/bg/cta-bg.jpg">
+                <div class="container">
+                    <div class="cta-wrap ul_li_between">
+                        <div class="xb-item--holder ul_li">
+                            <div class="xb-item--logo mt-30">
+                                <img src="assets/img/logo/logo-white.svg" alt="">
+                            </div>
+                            <div class="xb-item--line mt-30"></div>
+                            <p class="xb-item--content mt-30">With Us Happens. <span>We Would Love To Hear From You</span></p>
+                        </div>
+                        <div class="xb-item--link mt-30">ready to rock with us? <br> <a href="contact.html">Get in touch</a></div>
+                    </div>
+                </div>
+             </section> -->
+    <!-- cta end -->
+
+    </main>
+    <!-- main area end  -->
+
+    <!-- footer strt -->
+    <footer class="footer footer-style-three pt-10">
+        <div class="bg-border p-40" data-bg-color="#000">
+            <div class="footer-heading text-center">
+                <h2 class="footer-title">Nexa <span class="icon"><img src="assets/img/shape/frame02.png" alt=""></span>
+                    <span>Infotech</span>
+                </h2>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row mt-none-20">
+                    <div class="col-xl-2 col-lg-3 col-md-6 mt-70">
+                        <div class="xb-footer-widget mt-30">
+                            <h3 class="xb-item--title">company</h3>
+                            <ul class="xb-item--link list-unstyled mt-35">
+                                <li><a href="about.html" target="_blank">About Us</a></li>
+                                <li><a href="services.html" target="_blank">Services</a></li>
+                                <li><a href="portfolio-single.html" target="_blank">Portfolio</a></li>
+                            </ul>
+                        </div>
+                        <div class="xb-footer-widget mt-70">
+                            <h3 class="xb-item--title">Services</h3>
+                            <ul class="xb-item--link list-unstyled mt-35">
+                                <li><a href="services.html" target="_blank">Podcast Marketing</a></li>
+                                <li><a href="services.html" target="_blank">Content Marketing</a></li>
+                                <li><a href="services.html" target="_blank">Influencer marketing</a></li>
+                                <li><a href="services.html" target="_blank">Social Media Marketing</a></li>
+                                <li><a href="services.html" target="_blank">Web Design and Development</a></li>
+                                <li><a href="services.html" target="_blank">Video advertising</a></li>
+                                <li><a href="services.html" target="_blank">Social Media Management</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mt-70">
+                        <div class="xb-footer-widget pl-80 mt-30 pl-xs-0">
+                            <h3 class="xb-item--title">RESOURCES</h3>
+                            <ul class="xb-item--link list-unstyled mt-35">
+                                <li><a href="team.html" target="_blank">Team</a></li>
+                                <li><a href="faq.html" target="_blank">Faq</a></li>
+                            </ul>
+                        </div>
+                        <div class="xb-footer-widget pl-80 pl-xs-0 mt-115">
+                            <h3 class="xb-item--title">Social Media</h3>
+                            <ul class="xb-item--link list-unstyled mt-35">
+
+
+                                <li><a href="https://www.facebook.com/profile.php?id=61559579147779"
+                                        target="_blank">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/nexainfotech_/" target="_blank">Instagram</a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/company/nexa-infotech?trk=public_profile_topcard-current-company"
+                                        target="_blank">linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-5 col-md-6 mt-70">
+                        <div class="footer-info text-lg-end mt-30">
+                            <span>First Floor, Tulsi Arcade,<br>
+                                145, Sudama Chowk,<br>
+                                Mota Varachha,<br>
+                                Surat, Gujarat<br>
+                                394101</span>
+                            <h3>+91 7984325552</h3>
+                            <a class="xb-email" href="mailto:connect@nexainfotech.in">connect@nexainfotech.in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom ul_li_between">
+            <div class="xb-copyright mt-25">
+                <p>copyright & design by <a href="www.Codemario.html" target="_blank">@Code Mario</a> - 2024</p>
+            </div>
+            <!-- <ul class="footer_nav list-unstyled ul_li mt-25">
+                    <li><a href="#!">get in touch</a></li>
+                    <li><a href="#!">faq</a></li>
+                    <li><a href="#!">careers</a></li>
+                    <li><a href="#!">t & c</a></li>
+                </ul> -->
+        </div>
+    </footer>
+    <!-- footer end -->
+    </div>
+
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/imageRevealHover.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/easing.min.js"></script>
+    <script src="assets/js/scrollspy.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/cursor-bundle.js"></script>
+    <script src="assets/js/ukiyo.min.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from html.xpressbuddy.com/empyr/portfolio-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Jan 2025 09:38:22 GMT -->
+
+
+<!-- Mirrored from www.nexainfotech.in/portfolio-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 04:53:16 GMT -->
+</html>

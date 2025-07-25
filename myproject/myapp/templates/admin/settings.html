@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow-sm mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2 fs-3 fw-bold" href="{% url 'admin_dashboard' %}">
+                <img src="{% static 'admin/img/logo.jpg' %}" alt="Logo"
+                    style="height: 2.5rem; width: 2.5rem; object-fit: contain; border-radius: 0.5rem;  padding: 2px;">
+                Nexa Infotech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_service' %}">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_team' %}">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link active" href="{% url 'admin_settings' %}">Settings</a></li> -->
+                   <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="profileDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="profile-avatar d-inline-block rounded-circle overflow-hidden"
+                                style="width: 40px; height: 40px; border: 2px solid #6366f1;">
+                                <img src="{{ admin_user.image.url }}" alt="Profile" class="img-fluid"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end p-3 shadow">
+                            <li class="mb-2 text-center">
+                                <div class="text-muted small">{{ admin_user.email }}</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#adminProfileModal">Manage Profile</a></li>
+                            <li><a class="dropdown-item text-center text-danger" href="{% url 'admin_logout' %}"
+                                    style="text-decoration: none;">LOGOUT</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        {% if messages %}
+        {% for message in messages %}
+        <div id="flash-message" class="alert alert-success alert-dismissible fade show mx-3 mt-2" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar p-0 pt-4">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_service' %}">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_team' %}">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Contact</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link active" href="{% url 'admin_settings' %}">Settings</a> -->
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-3 mb-4 border-bottom">
+                    <h1 class="h2 fw-bold">Contacts</h1>
+                </div>
+
+                <div class="table-responsive mt-3">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Sr no.</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th class="text-center">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for contact in contacts %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ contact.name }}</td>
+                                <td>{{ contact.email }}</td>
+                                <td>{{ contact.subject }}</td>
+                                <td>{{ contact.message|linebreaksbr }}</td>
+                                <td class="text-center "><a href="{% url 'delete_contact' contact.id %}"
+                                        onclick="return confirm('Are you sure you want to delete this contact?');"><i
+                                            class="fa-solid fa-trash text-danger"></i></a></td>
+
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center">No contact entries found.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 
+                <div class="row">
+                    <div class="col-md-8">
+                      
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">General Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="siteName" class="form-label">Site Name</label>
+                                            <input type="text" class="form-control" id="siteName" value="Nexa Infotech">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="siteUrl" class="form-label">Site URL</label>
+                                            <input type="url" class="form-control" id="siteUrl"
+                                                value="https://nexainfotech.com">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="siteDescription" class="form-label">Site Description</label>
+                                        <textarea class="form-control" id="siteDescription"
+                                            rows="3">Leading technology solutions provider</textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="adminEmail" class="form-label">Admin Email</label>
+                                            <input type="email" class="form-control" id="adminEmail"
+                                                value="admin@nexainfotech.com">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="timezone" class="form-label">Timezone</label>
+                                            <select class="form-select" id="timezone">
+                                                <option value="UTC">UTC</option>
+                                                <option value="IST" selected>IST (UTC+5:30)</option>
+                                                <option value="EST">EST (UTC-5)</option>
+                                                <option value="PST">PST (UTC-8)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Security Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="currentPassword" class="form-label">Current Password</label>
+                                            <input type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="newPassword" class="form-label">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                        <input type="password" class="form-control" id="confirmPassword">
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                        <label class="form-check-label" for="twoFactorAuth">
+                                            Enable Two-Factor Authentication
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning">Update Password</button>
+                                </form>
+                            </div>
+                        </div> -->
+
+                <!-- Email Settings -->
+                <!-- <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Email Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="smtpHost" class="form-label">SMTP Host</label>
+                                            <input type="text" class="form-control" id="smtpHost" value="smtp.gmail.com">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="smtpPort" class="form-label">SMTP Port</label>
+                                            <input type="number" class="form-control" id="smtpPort" value="587">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="smtpUsername" class="form-label">SMTP Username</label>
+                                            <input type="email" class="form-control" id="smtpUsername" value="noreply@nexainfotech.com">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="smtpPassword" class="form-label">SMTP Password</label>
+                                            <input type="password" class="form-control" id="smtpPassword">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info">Test Email Settings</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <!-- <div class="col-md-4"> -->
+                <!-- Quick Actions -->
+                <!-- <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Quick Actions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary">
+                                        <i class="bi bi-download me-2"></i>Backup Database
+                                    </button>
+                                    <button class="btn btn-outline-warning">
+                                        <i class="bi bi-arrow-clockwise me-2"></i>Clear Cache
+                                    </button>
+                                    <button class="btn btn-outline-info">
+                                        <i class="bi bi-gear me-2"></i>System Info
+                                    </button>
+                                    <button class="btn btn-outline-danger">
+                                        <i class="bi bi-trash me-2"></i>Delete Cache
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+
+                <!-- System Info -->
+                <!-- <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">System Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-2">
+                                    <strong>Django Version:</strong> 4.2.7
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Python Version:</strong> 3.11.0
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Database:</strong> SQLite
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Server:</strong> Development
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Last Backup:</strong> Today
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Disk Usage:</strong> 45%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </main>
+        </div>
+    </div>
+
+    <!-- Admin Profile Modal -->
+    <div class="modal fade" id="adminProfileModal" tabindex="-1" aria-labelledby="adminProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="adminProfileModalLabel">Admin Profile</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                {% load static %}
+                <form method="POST" enctype="multipart/form-data" class="text-black p-3 rounded bg-white">
+                    {% csrf_token %}
+                    <div class="text-center mb-3">
+                        <label for="profilePhoto" class="d-inline-block rounded-circle mb-2 position-relative"
+                            style="width:120px; height:120px; overflow:hidden; border:2px solid #6366f1; cursor:pointer; background-color:#000;">
+                            <img id="photoPreview"
+                                src="{% if admin_user.image %}{{ admin_user.image.url }}{% else %}{% static 'images/admin-photo.jpg' %}{% endif %}"
+                                alt="Admin Photo" class="w-100 h-100" style="object-fit: cover;">
+                            <input type="file" id="profilePhoto" name="image" accept="image/*" style="display:none;">v
+                            <span class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle p-1"
+                                style="font-size:0.7rem;">
+                                <i class="bi bi-pencil"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label mb-1 fw-semibold">Name:</label>
+                        <input type="text" class="form-control form-control-sm" name="username"
+                            value="{{ admin_user.username }}" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label mb-1 fw-semibold">Email:</label>
+                        <input type="email" class="form-control form-control-sm" name="email"
+                            value="{{ admin_user.email }}" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label mb-1 fw-semibold">Password:</label>
+                        <input type="password" class="form-control form-control-sm" name="password"
+                            placeholder="Change password (optional)">
+                    </div>
+
+
+
+                    <div class="text-center mt-3 d-flex justify-content-center gap-2">
+                        <button type="submit" class="btn btn-primary btn-sm px-4">Save Changes</button>
+                        <a href="{% url 'admin_dashboard' %}" class="btn btn-secondary btn-sm px-4">Cancel</a>
+                    </div>
+
+                    <script>
+                        document.getElementById('profilePhoto').addEventListener('change', function (event) {
+                            const [file] = event.target.files;
+                            if (file) {
+                                document.getElementById('photoPreview').src = URL.createObjectURL(file);
+                            }
+                        });
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'admin/js/dashboard.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow-sm mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2 fs-3 fw-bold" href="{% url 'admin_dashboard' %}">
+                <img src="{% static 'admin/img/logo.jpg' %}" alt="Logo" style="height: 2.5rem; width: 2.5rem; object-fit: contain; border-radius: 0.5rem;  padding: 2px;"> Nexa Infotech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_service' %}">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_users' %}">Users</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Settings</a></li> -->
+                    <li class="nav-item"><a class="nav-link text-danger" href="{% url 'admin_logout' %}" id="logoutBtn">Logout</a></li>
+                    <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="profile-avatar">
+                                <i class="bi bi-person-fill" style="font-size:1.7rem;"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end p-3 shadow">
+                            <li class="mb-2 text-center">
+                                <span class="d-inline-block rounded-circle bg-light mb-2" style="width:60px; height:60px; overflow:hidden; border:2px solid #6366f1;">
+                                    <i class="bi bi-person-circle text-primary" style="font-size:3rem; line-height:56px;"></i>
+                                </span>
+                                <div class="fw-bold mt-2">Admin</div>
+                                <div class="text-muted small">admin@example.com</div>
+                                <div class="badge bg-primary mt-2">Admin</div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#" id="viewProfileBtn" data-bs-toggle="modal" data-bs-target="#adminProfileModal">View Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar p-0 pt-4">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_service' %}">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin_users' %}">Users</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Settings</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-3 mb-4 border-bottom">
+                    <h1 class="h2 fw-bold">Edit Item</h1>
+                    <a href="{% url 'admin_users' %}" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Back to Users
+                    </a>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Edit User Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="editName" value="John Doe" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="editEmail" value="john@example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editPhone" class="form-label">Phone</label>
+                                            <input type="tel" class="form-control" id="editPhone" value="+91 9876543210">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editRole" class="form-label">Role</label>
+                                            <select class="form-select" id="editRole" required>
+                                                <option value="admin" selected>Admin</option>
+                                                <option value="user">User</option>
+                                                <option value="editor">Editor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editAddress" class="form-label">Address</label>
+                                        <textarea class="form-control" id="editAddress" rows="3">123 Main Street, City, Country</textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editStatus" class="form-label">Status</label>
+                                            <select class="form-select" id="editStatus" required>
+                                                <option value="active" selected>Active</option>
+                                                <option value="inactive">Inactive</option>
+                                                <option value="pending">Pending</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="editPhoto" class="form-label">Profile Photo</label>
+                                            <input type="file" class="form-control" id="editPhoto" accept="image/*">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button type="submit" class="btn btn-primary">Update User</button>
+                                        <button type="button" class="btn btn-outline-secondary">Reset</button>
+                                        <button type="button" class="btn btn-danger">Delete User</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">User Preview</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="{% static 'admin/img/user-avatar.jpg' %}" class="rounded-circle mb-3" alt="User Avatar" style="width: 100px; height: 100px; object-fit: cover;">
+                                <h6 class="card-title">John Doe</h6>
+                                <p class="card-text text-muted">Admin</p>
+                                <div class="badge bg-success mb-2">Active</div>
+                                <p class="small text-muted">Last updated: Today</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Quick Actions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-envelope me-2"></i>Send Email
+                                    </button>
+                                    <button class="btn btn-outline-info btn-sm">
+                                        <i class="bi bi-key me-2"></i>Reset Password
+                                    </button>
+                                    <button class="btn btn-outline-warning btn-sm">
+                                        <i class="bi bi-lock me-2"></i>Suspend User
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Admin Profile Modal -->
+    <div class="modal fade" id="adminProfileModal" tabindex="-1" aria-labelledby="adminProfileModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="adminProfileModalLabel">Admin Profile</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-black">
+            <div class="text-center mb-3">
+              <span class="d-inline-block rounded-circle bg-light mb-2" style="width:80px; height:80px; overflow:hidden; border:2px solid #6366f1;">
+                <i class="bi bi-person-circle text-primary" style="font-size:4rem; line-height:76px;"></i>
+              </span>
+              <div class="fw-bold mt-2 fs-4">Admin</div>
+              <div class="text-muted small">admin@example.com</div>
+              <div class="badge bg-primary mt-2">Admin</div>
+            </div>
+            <hr>
+            <div>
+              <strong>Email:</strong> admin@example.com<br>
+              <strong>Role:</strong> Admin<br>
+              <strong>Status:</strong> Active<br>
+              <strong>Last Login:</strong> Today
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'admin/js/dashboard.js' %}"></script>
+</body>
+</html> 

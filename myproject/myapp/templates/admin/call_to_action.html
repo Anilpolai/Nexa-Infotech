@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call to Action - Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" />
+</head>
+<body>
+  <!-- Full header/navbar copied from Blogs page -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow-sm mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fs-3 fw-bold" href="{% url 'admin_dashboard' %}">
+        <img src="{% static 'admin/img/logo.jpg' %}" alt="Logo" style="height:2.5rem;width:2.5rem;object-fit:contain;border-radius:0.5rem; padding:2px;" />
+        Nexa Infotech
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{% url 'admin_service' %}">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_users' %}">Users</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Settings</a></li> -->
+          <li class="nav-item"><a class="nav-link text-danger" href="{% url 'admin_logout' %}">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar p-0 pt-4">
+         <ul class="navbar-nav align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{% url 'admin_service' %}">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_users' %}">Users</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="{% url 'admin_settings' %}">Settings</a></li> -->
+          
+        </ul>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-3 mb-4 border-bottom">
+          <h1 class="h2 fw-bold">📞 Call to Action Requests</h1>
+        </div>
+
+        <!-- Your existing Call to Action table/content below here -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Business Email</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Message</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>Website Design</td>
+                    <td>Need a new responsive design for our homepage.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jane Smith</td>
+                    <td>jane@brand.com</td>
+                    <td>Marketing Campaign</td>
+                    <td>Looking to run Google Ads for summer sale.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Mike Johnson</td>
+                    <td>mike@startup.io</td>
+                    <td>App Development</td>
+                    <td>Build an MVP for our mobile app idea.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Emily White</td>
+                    <td>emily@creative.co</td>
+                    <td>Logo Redesign</td>
+                    <td>Need a fresh look for our brand logo.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Chris Brown</td>
+                    <td>chris@enterprise.com</td>
+                    <td>SEO Optimization</td>
+                    <td>Boost website ranking on search engines.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Linda Green</td>
+                    <td>linda@shopnow.com</td>
+                    <td>Social Media Ads</td>
+                    <td>Plan and design ads for Facebook & Instagram.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Tom Lee</td>
+                    <td>tom@agency.net</td>
+                    <td>Content Writing</td>
+                    <td>Need 10 blog posts for product launch.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Olivia Martin</td>
+                    <td>olivia@designhub.com</td>
+                    <td>UI Audit</td>
+                    <td>Review current UI and suggest improvements.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

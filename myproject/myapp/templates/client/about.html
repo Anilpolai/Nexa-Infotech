@@ -1,0 +1,707 @@
+{% load static %}
+<!doctype html>
+<html lang="zxx">
+
+
+
+
+<!-- Mirrored from www.nexainfotech.in/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 04:32:07 GMT -->
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nexa Infotech | About Us</title>
+
+    <link rel="shortcut icon" href="{% static 'img/favicon-16x16.png' %}" type="images/x-icon" />
+
+    <!-- css include -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cursor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/imageRevealHover.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+    <!-- backtotop - start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop - end -->
+
+    <!-- Preloader - Start -->
+    <!-- <div id="preloader" class="preloader">
+        <div class="loader-circle">
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-logo">
+                
+            </div>
+        </div>
+    </div> -->
+    <!-- Preloader - End -->
+
+    <div class="xb-cursor xb-js-cursor">
+        <div class="xb-cursor-wrapper">
+            <div class="xb-cursor--follower xb-js-follower"></div>
+        </div>
+    </div>
+
+
+    <div class="body_wrap">
+
+        <!-- header start -->
+        <header id="xb-header-area" class="header-area header-style-three is-sticky">
+            <div class="xb-header">
+                <div class="container-fluid">
+                    <div class="header__wrap ul_li_between">
+                        <div class="header-left ul_li">
+                            <div class="header-logo">
+                                <a href="{% url 'index' %}">
+                                    <img src="{% static 'img/logo/white nexa logo.png' %}" alt="">
+                                    <img src="{% static 'img/logo/nexa_logo.png' %}" alt="">
+                                </a>
+                            </div>
+                            <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
+                                <nav class="main-menu collapse navbar-collapse">
+                                    <ul>
+                                        <!-- <li class="menu-item-has-children active">
+                                            <a href="#!"><span>Home</span></a>
+                                            <ul class="submenu">
+                                                <li class="active"><a href="index.html"><span>Home 01</span></a></li>
+                                                <li><a href="home-2.html"><span>Home 02</span></a></li>
+                                                <li><a href="index.html"><span>Home 03</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Pages</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html"><span>About</span></a></li>
+                                                <li><a href="services.html"><span>Services</span></a></li>
+                                                <li><a href="service-single.html"><span>Service Details</span></a></li>
+                                                <li><a href="team.html"><span>Team</span></a></li>
+                                                <li><a href="team-single.html"><span>Team Details</span></a></li>
+                                                <li><a href="career.html"><span>Career</span></a></li>
+                                                <li><a href="career-single.html"><span>Career Details</span></a></li>
+                                                <li><a href="faq.html"><span>FAQ</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Portfolio</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="portfolio-single.html"><span>Portfolio</span></a></li>
+                                                <li><a href="portfolio-single.html"><span>Portfolio Details</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#!"><span>Blog</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html"><span>Blog</span></a></li>
+                                                <li><a href="blog-single.html"><span>Blog Details</span></a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="{% url 'index' %}" target="_blank"><span>Home</span></a></li>
+                                        <li><a href="{% url 'about' %}" target="_blank"><span>About Us</span></a></li>
+                                        <li><a href="{% url 'service' %}" target="_blank"><span>Services</span></a></li>
+                                        <li><a href="{% url 'portfolio' %}" target="_blank"><span>Portfolio</span></a></li>
+                                        <li><a href="{% url 'faq' %}" target="_blank"><span>Faq</span></a></li>
+                                        <li><a href="{% url 'team' %}" target="_blank"><span>Team</span></a></li>
+                                        <li><a href="{% url 'blog' %}" target="_blank"><span>Blog</span></a></li>
+                                        <li><a href="{% url 'contact' %}" target="_blank"><span>Contact Us</span></a></li>
+                                        
+
+                                    </ul>
+                                </nav>
+                                <div class="xb-header-wrap">
+                                    <div class="xb-header-menu">
+                                        <div class="xb-header-menu-scroll lenis lenis-smooth">
+                                            <div class="xb-menu-close xb-hide-xl">Close</div>
+                                            <nav class="xb-header-nav">
+                                                <ul class="xb-menu-primary clearfix">
+                                                    <!-- <li class="menu-item menu-item-has-children active">
+                                                        <a href="index.html"><span>Home</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li class="active"><a href="index.html"><span>Home 01</span></a></li>
+                                                            <li><a href="home-2.html"><span>Home 02</span></a></li>
+                                                            <li><a href="index.html"><span>Home 03</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Pages</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="about.html"><span>About</span></a></li>
+                                                            <li><a href="services.html"><span>Services</span></a></li>
+                                                            <li><a href="service-single.html"><span>Service Details</span></a></li>
+                                                            <li><a href="team.html"><span>Team</span></a></li>
+                                                            <li><a href="team-single.html"><span>Team Details</span></a></li>
+                                                            <li><a href="career.html"><span>Career</span></a></li>
+                                                            <li><a href="career-single.html"><span>Career Details</span></a></li>
+                                                            <li><a href="faq.html"><span>FAQ</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Portfolio</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="portfolio-single.html"><span>Portfolio</span></a></li>
+                                                            <li><a href="portfolio-single.html"><span>Portfolio Details</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <!-- <li class="menu-item menu-item-has-children">
+                                                        <a href="#!"><span>Blog</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="blog.html"><span>Blog</span></a></li>
+                                                            <li><a href="blog-single.html"><span>Blog Details</span></a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                    <li><a href="{% url 'index' %}" target="_blank"><span>Home</span></a></li>
+                                                    <li><a href="{% url 'about' %}" target="_blank"><span>About Us</span></a></li>
+                                                    <li><a href="{% url 'team' %}" target="_blank"><span>Team</span></a></li>
+                                                    
+                                                    <li><a href="{% url 'service' %}" target="_blank"><span>Services</span></a></li>
+                                                    <li><a href="{% url 'portfolio' %}" target="_blank"><span>Portfolio</span></a></li>
+                                                    <li><a href="{% url 'faq' %}" target="_blank"><span>Faq</span></a></li>
+                                                    <li><a href="{% url 'blog' %}" target="_blank"><span>Blog</span></a></li>
+                                                    <li><a href="{% url 'contact' %}" target="_blank"><span>Contact Us</span></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="xb-header-menu-backdrop"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right ul_li">
+                            <!-- <a href="mailto:connect@nexainfotech.in" class="header-contact">connect@nexainfotech.in</a> -->
+                            <div class="header-btn d-none d-md-block">
+                                <a href="{% url 'contact' %}" class="thm-btn"><i class="fa-regular fa-plus"></i>let’s talk</a>
+                            </div>
+                            <div class="header-bar-mobile side-menu d-lg-none">
+                                <a class="xb-nav-mobile hamburger-menu" href="javascript:void(0);">
+                                    <span class="line line--1"></span>
+                                    <span class="line line--2"></span>
+                                    <span class="line line--3"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- main area start  -->
+        <main>
+
+            <!-- breadcrumb start -->
+            <section class="breadcrumb pos-rel ul_li_center bg_img" data-bg-color="#000">
+                <div class="container">
+                    <div class="row align-items-end mt-none-30">
+                        <div class="col-lg-7 mt-30">
+                            <div class="breadcrumb__content">
+                                <span class="breadcrumb__subtitle">Meet with Nexa Infotech</span>
+                                <h2 class="breadcrumb__title">About <span>company</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 mt-30">
+                            <div class="breadcrumb__list-wrap text-lg-end mb-20">
+                                <ul class="breadcrumb__list clearfix ul_li">
+                                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                                    <li class="breadcrumb-item">about us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb__shape">
+                    <div class="shape shape--1">
+                        <img src="{% static 'img/shape/brd_shape1.png' %}" alt="">
+                    </div>
+                    <div class="shape shape--2">
+                        <img data-parallax='{"y":80}' src="{% static 'img/shape/brd_shape2.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb end -->
+
+            <!-- about start -->
+            <section class="about pt-120 pb-120">
+                <div class="container">
+                    <div class="row align-items-center mt-none-30">
+                        <div class="col-lg-6 mt-30">
+                            <div class="about-image">
+                                <img src="{% static 'img/about/about-img03.jpg' %}" alt="">
+                                <div class="about-shape-icon">
+                                    <div class="shape shape--1">
+                                        <img data-parallax='{"x":-30}' src="{% static 'img/shape/about_shape2.png' %}" alt="">
+                                    </div>
+                                    <div class="shape shape--2">
+                                        <img data-parallax='{"y":80}' src="{% static 'img/shape/about_shape.png' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-30">
+                            <div class="sec-title sec-title--three mb-50">
+                                <span class="sub-title">about us</span>
+                                <h2 class="title"><span>Creating</span> tailored <br>
+                                    solutions with <span>accuracy</span>
+                                    and dedication.</h2>
+                            </div>
+                            <div class="xb-about-inner">
+                                <h3 class="xb-item--title">mission &amp; vision</h3>
+                                <div class="xb-item--content ul_li align-items-start">
+                                    <p>To empower <span>businesses</span> with innovative digital marketing solutions
+                                        that drive growth, enhance customer engagement, and maximize ROI. We strive to
+                                        be a trusted partner for our clients, delivering tailored strategies with
+                                        measurable results.</p>
+                                    <p>To become a global leader in digital marketing, recognized for our cutting-edge
+                                        solutions and unwavering commitment to client success. We aim to shape the
+                                        future of digital marketing by pioneering new strategies, technologies, and best
+                                        practices.</p>
+                                </div>
+                                <div class="about-btn mt-50">
+                                    <a href="{% url 'service' %}" class="thm-btn thm-btn--border"><i
+                                            class="fa-regular fa-plus"></i>our expertise</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about end -->
+
+            <!-- history start -->
+            <section class="history pt-120 pb-140" data-bg-color="#F1F1F1">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="sec-title sec-title--three text-center mb-80 mb-lg-20 wow fadeInUp"
+                                data-wow-delay="0ms" data-wow-duration=".6s">
+                                <span class="sub-title">our history</span>
+                                <h2 class="title"><span>We believe</span> that a website <br>
+                                    is the foundation <span>successful</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="history-item mt-80 wow fadeInUp" data-wow-delay="0ms" data-wow-duration=".6s">
+                                <span class="xb-item--number">2023</span>
+                                <h3 class="xb-item--title">Journey <span>started</span></h3>
+                                <p class="xb-item--content">Nexa Infotech embarked on its journey in 2023 with a small
+                                    but passionate team of developers, digital marketing and designers in Surat,
+                                    Gujarat. Our company was born out of a shared vision to empower businesses with
+                                    cutting-edge technology solutions and create impactful web experiences.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="history-item mt-40 wow fadeInUp" data-wow-delay="150ms" data-wow-duration=".6s">
+                                <span class="xb-item--number">2024</span>
+                                <h3 class="xb-item--title">6+ <span>rewards</span></h3>
+                                <p class="xb-item--content">Our journey has been marked by numerous accolades and
+                                    accomplishments that reflect our dedication to innovation and excellence</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="history-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration=".6s">
+                                <span class="xb-item--number">2024</span>
+                                <h3 class="xb-item--title">Launch <span>products</span></h3>
+                                <p class="xb-item--content">Our innovative spirit drives us to develop and launch
+                                    products that cater to the evolving needs of our clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- history end -->
+
+            <!-- faq start -->
+            <section class="faq pt-10">
+                <div class="container-fluid p-0">
+                    <div class="bg-border p-40">
+                        <div class="row mt-none-30">
+                            <div class="col-lg-6 mt-30">
+                                <div class="faq-image">
+                                    <img class="wow skewIn" data-wow-duration="600ms"
+                                        style="height: 850px; width: 800px;" src="{% static 'img/faq/faq-img03.jpg' %}" alt="">
+                                    <!-- <div class="circle-video">
+                                        <a href="https://www.youtube.com/watch?v=cRXm1p-CNyk" class="wow fadeInRight popup-video vd-play xb-element-parallax vd-play--md" data-wow-delay="300ms">Play</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-30">
+                                <div class="faq-inner wow fadeInRight" data-wow-duration="600ms" data-wow-delay="200ms">
+                                    <div class="sec-title sec-title--three pr-20 mb-60">
+                                        <span class="sub-title">faq & option</span>
+                                        <h2 class="title">Get <span>every</span> single question and
+                                            answer from <span>company.</span></h2>
+                                    </div>
+                                    <ul class="accordion_box faq_style2 clearfix list-unstyled">
+                                        <li class="accordion block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">What services does Nexa Infotech offer?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>SEO, PPC, social media marketing, content marketing, web
+                                                            development, and mobile app development.
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="accordion block active-block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">How can Nexa Infotech improve my business's online
+                                                    <br>presence?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body current">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>By using a mix of SEO, PPC, social media marketing, and
+                                                            content marketing.
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="accordion block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">How does Nexa Infotech's process work?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>Understanding client needs, setting goals, competitor
+                                                            analysis, strategy development, execution, and optimization.
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="accordion block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">Can I track the performance of my digital marketing
+                                                    campaigns?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>Yes, with detailed reporting and analytics.
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+                                        <li class="accordion block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">What industries does Nexa Infotech serve?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>Various industries including e-commerce, healthcare, finance,
+                                                            and education
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+                                        <li class="accordion block">
+                                            <div class="acc-btn">
+                                                <h3 class="title">How can I get in touch with Nexa Infotech?</h3>
+                                                <span class="arrow"></span>
+                                            </div>
+                                            <div class="acc_body">
+                                                <div class="content ul_li_between">
+                                                    <div class="content-inner">
+                                                        <p>Via their website or by calling +91 7984325552.
+                                                        </p>
+                                                        <!-- <a href="#!" class="more-btn">read more</a> -->
+                                                    </div>
+                                                    <div class="image">
+                                                        <!-- <img src="assets/img/faq/faq-img04.jpg" alt=""> -->
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- faq end -->
+
+            <!-- video start -->
+            <div class="video">
+                <h2 class="marq-strok marquee-left">meet with creative mints</h2>
+                <div class="container">
+                    <div class="video-inner pos-rel">
+                        <img src="{% static 'img/video/video-bg03.jpg' %}" alt="" style="margin-top: 150px;">
+                        <!-- <a href="https://www.youtube.com/watch?v=cRXm1p-CNyk" class="btn-video btn-video-center popup-video">
+                            <i class="fas fa-play"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- video end -->
+
+            <!-- funfact start -->
+            <section class="funfact pt-115 pb-105">
+                <div class="container">
+                    <div class="funfact-inner ul_li_between">
+                        <div class="funfact-item">
+                            <h2 class="xb-item--number"><span class="xbo" data-count="02">00</span><span
+                                    class="suffix">+</span></h2>
+                            <h5 class="xb-item--title"><span>Years of experience</span></h5>
+                        </div>
+                        <div class="funfact-item">
+                            <h2 class="xb-item--number"><span class="xbo" data-count="25">00</span><span
+                                    class="suffix">+</span></h2>
+                            <h5 class="xb-item--title"><span>Successful projects</span></h5>
+                        </div>
+                        <!-- <div class="funfact-item">
+                            <h2 class="xb-item--number"><span class="xbo" data-count="219">00</span></h2>
+                            <h5 class="xb-item--title"><span>active reviews</span></h5>
+                        </div> -->
+                        <div class="funfact-item">
+                            <h2 class="xb-item--number"><span class="xbo" data-count="95">00</span><span
+                                    class="suffix">+</span></h2>
+                            <h5 class="xb-item--title"><span>Client satisfaction rate</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- funfact end -->
+
+            <!-- gallery start -->
+            <!-- <section class="gallery pb-120">
+                <div class="gallery-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/img_01.jpg" alt="">
+                                </div>
+                                <a class="xb-overlay popup-image" href="assets/img/gallery/img_01.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/img_02.jpg" alt="">
+                                </div>
+                                <a class="xb-overlay popup-image" href="assets/img/gallery/img_02.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/img_03.jpg" alt="">
+                                </div>
+                                <a class="xb-overlay popup-image" href="assets/img/gallery/img_03.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="assets/img/gallery/img_01.jpg" alt="">
+                                </div>
+                                <a class="xb-overlay popup-image" href="assets/img/gallery/img_01.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- gallery end -->
+
+            <!-- cta start -->
+            <!-- <section class="cta bg_img" data-background="assets/img/bg/cta-bg.jpg">
+                <div class="container">
+                    <div class="cta-wrap ul_li_between">
+                        <div class="xb-item--holder ul_li">
+                            <div class="xb-item--logo mt-30">
+                                <img src="assets/img/logo/nexa_logo.png" alt="">
+                            </div>
+                            <div class="xb-item--line mt-30"></div>
+                            <p class="xb-item--content mt-30">With Us Happens. <span>We Would Love To Hear From You</span></p>
+                        </div>
+                        <div class="xb-item--link mt-30">ready to rock with us? <br> <a href="contact.html">Get in touch</a></div>
+                    </div>
+                </div>
+             </section> -->
+            <!-- cta end -->
+
+        </main>
+        <!-- main area end  -->
+
+        <!-- footer strt -->
+        <footer class="footer footer-style-three pt-10">
+            <div class="bg-border p-40" data-bg-color="#000">
+                <div class="footer-heading text-center">
+                    <h2 class="footer-title">Nexa <span class="icon"><img src="assets/img/shape/frame02.png"
+                                alt=""></span> <span>Infotech</span></h2>
+                </div>
+                <div class="container-fluid p-0">
+                    <div class="row mt-none-20">
+                        <div class="col-xl-2 col-lg-3 col-md-6 mt-70">
+                            <div class="xb-footer-widget mt-30">
+                                <h3 class="xb-item--title">company</h3>
+                                <ul class="xb-item--link list-unstyled mt-35">
+                                    <li><a href="{% url 'about' %}" target="_blank">About Us</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Services</a></li>
+                                    <li><a href="{% url 'portfolio' %}" target="_blank">Portfolio</a></li>
+                                </ul>
+                            </div>
+                            <div class="xb-footer-widget mt-70">
+                                <h3 class="xb-item--title">Services</h3>
+                                <ul class="xb-item--link list-unstyled mt-35">
+                                    <li><a href="{% url 'service' %}" target="_blank">Podcast Marketing</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Content Marketing</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Influencer marketing</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Social Media Marketing</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Web Design and Development</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Video advertising</a></li>
+                                    <li><a href="{% url 'service' %}" target="_blank">Social Media Management</a></li>
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mt-70">
+                            <div class="xb-footer-widget pl-80 mt-30 pl-xs-0">
+                                <h3 class="xb-item--title">RESOURCES</h3>
+                                <ul class="xb-item--link list-unstyled mt-35">
+                                    <li><a href="{% url 'team' %}" target="_blank">Team</a></li>
+                                    <li><a href="{% url 'faq' %}" target="_blank">Faq</a></li>
+                                </ul>
+                            </div>
+                            <div class="xb-footer-widget pl-80 pl-xs-0 mt-115">
+                                <h3 class="xb-item--title">Social Media</h3>
+                                <ul class="xb-item--link list-unstyled mt-35">
+
+
+                                    <li><a href="https://www.facebook.com/profile.php?id=61559579147779"
+                                            target="_blank">Facebook</a></li>
+                                    <li><a href="https://www.instagram.com/nexainfotech_/" target="_blank">Instagram</a>
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/company/nexa-infotech?trk=public_profile_topcard-current-company"
+                                            target="_blank">linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-5 col-md-6 mt-70">
+                            <div class="footer-info text-lg-end mt-30">
+                                <span>First Floor, Tulsi Arcade,<br>
+                                    145, Sudama Chowk,<br>
+                                    Mota Varachha,<br>
+                                    Surat, Gujarat<br>
+                                    394101</span>
+                                <h3>+91 7984325552</h3>
+                                <a class="xb-email" href="mailto:connect@nexainfotech.in">connect@nexainfotech.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom ul_li_between">
+                <div class="xb-copyright mt-25">
+                    <p>
+                        COPYRIGHT & DESIGN BY <a href="https://www.codemario.com" target="_blank"><b>@CODE MARIO</b></a> - 2024
+                    </p>
+                </div>
+                <!-- <ul class="footer_nav list-unstyled ul_li mt-25">
+                    <li><a href="#!">get in touch</a></li>
+                    <li><a href="#!">faq</a></li>
+                    <li><a href="#!">careers</a></li>
+                    <li><a href="#!">t & c</a></li> -->
+                </ul>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+
+    <!-- jquery include -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'js/appear.js' %}"></script>
+    <script src="{% static 'js/odometer.min.js' %}"></script>
+    <script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/imageRevealHover.js' %}"></script>
+    <script src="{% static 'js/TweenMax.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/parallax-scroll.js' %}"></script>
+    <script src="{% static 'js/easing.min.js' %}"></script>
+    <script src="{% static 'js/scrollspy.js' %}"></script>
+    <script src="{% static 'js/cursor.js' %}"></script>
+    <script src="{% static 'js/cursor-bundle.js' %}"></script>
+    <script src="{% static 'js/ukiyo.min.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+
+
+
+<!-- Mirrored from www.nexainfotech.in/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 04:32:09 GMT -->
+</html>

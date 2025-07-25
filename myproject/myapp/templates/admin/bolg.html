@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow-sm mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2 fs-3 fw-bold" href="{% url 'admin_dashboard' %}">
+        <img src="{% static 'admin/img/logo.jpg' %}" alt="Logo" style="height: 2.5rem; width: 2.5rem; object-fit: contain; border-radius: 0.5rem; padding: 2px;">
+        Nexa Infotech
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_service' %}">Service</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_users' %}">Users</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="{% url 'admin_logout' %}">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="h2 fw-bold">Blog Management</h1>
+      <button class="btn btn-primary">
+        <i class="bi bi-plus-circle me-2"></i>Add New Blog
+      </button>
+    </div>
+
+    <div class="row g-4">
+      <!-- Example blog post card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow h-100">
+          <img src="{% static 'admin/img/sample-blog.jpg' %}" class="card-img-top" alt="Blog Thumbnail" style="object-fit: cover; height: 180px;">
+          <div class="card-body">
+            <h5 class="card-title">Sample Blog Title</h5>
+            <p class="card-text">Short description of the blog content to give a preview.</p>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
+              <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate or add more blog cards below as needed -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow h-100">
+          <img src="{% static 'admin/img/sample-blog.jpg' %}" class="card-img-top" alt="Blog Thumbnail" style="object-fit: cover; height: 180px;">
+          <div class="card-body">
+            <h5 class="card-title">Another Blog Post</h5>
+            <p class="card-text">Another short summary to describe this blog post briefly.</p>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
+              <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'admin/js/dashboard.js' %}"></script>
+</body>
+</html>
